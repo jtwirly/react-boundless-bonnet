@@ -32,7 +32,6 @@
   ]
 }
 
-// https://github.com/stripe/react-stripe-elements/blob/master/package.json
 
 {
   "name": "react-stripe-elements",
@@ -117,7 +116,6 @@
   }
 }
 
-// from https://glitch.com/edit/#!/gold-town?path=package.json:21:1
 
 {
   "name": "stripe-webhook-example",
@@ -141,7 +139,6 @@
   ]
 }
 
-// from https://github.com/stripe/stripe-node/blob/master/examples/webhook-signing/package.json
 
 {
   "name": "webhook-signing-example-express",
@@ -157,7 +154,6 @@
   }
 }
 
-// from https://github.com/stripe/stripe-node/blob/master/package.json
 
 {
   "name": "stripe",
