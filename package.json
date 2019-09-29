@@ -1,212 +1,118 @@
 {
-  "//1": "describes your app and its dependencies",
-  "//2": "https://docs.npmjs.com/files/package.json",
-  "//3": "updating this file will download and update your packages",
-  "name": "starter-react",
-  "version": "0.0.1",
-  "description": "A small scaffold to get you started using React with Webpack",
-  "main": "server.js",
-  "scripts": {
-    "build": "webpack",
-    "start": "webpack && node server.js"
-  },
-  "dependencies": {
-    "express": "^4.16.4",
-    "jsx-loader": "^0.13.2",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "webpack": "^4.30.0",
-    "webpack-cli": "^3.3.0"
-  },
-  "engines": {
-    "node": "8.x"
-  },
-  "repository": {
-    "url": "https://glitch.com/edit/#!/starter-react"
-  },
-  "license": "MIT",
-  "keywords": [
-    "node",
-    "glitch",
-    "express"
-  ]
-}
-
-
-{
-  "name": "react-stripe-elements",
-  "version": "5.0.1",
-  "description": "React components for Stripe.js and Stripe Elements",
-  "main": "./lib/index.js",
-  "module": "es/index.js",
-  "jsnext:main": "es/index.js",
-  "scripts": {
-    "test": "node_modules/.bin/jest",
-    "build:commonjs": "cross-env BABEL_ENV=commonjs babel src --out-dir lib",
-    "build:es": "cross-env BABEL_ENV=es babel src --out-dir es",
-    "build:umd": "cross-env BABEL_ENV=commonjs webpack src/index.js -o dist/react-stripe-elements.js --config webpack.config.prod.js --env.noMinimize",
-    "build:umd:min": "cross-env BABEL_ENV=commonjs webpack src/index.js -o dist/react-stripe-elements.min.js --config webpack.config.prod.js",
-    "lint": "eslint src demo",
-    "flow": "flow",
-    "build": "yarn run lint && yarn run flow && yarn run build:commonjs && yarn run build:es && yarn run build:umd && yarn run build:umd:min",
-    "clean": "rimraf lib dist es",
-    "prettier": "prettier './**/*.js' './**/*.css' './**/*.md' --write",
-    "prettier-list-different": "prettier './**/*.js' './**/*.css' './**/*.md' --list-different",
-    "prepublish": "yarn run clean && yarn run build",
-    "demo": "webpack-dev-server --content-base dist",
-    "doctoc": "doctoc README.md"
-  },
-  "keywords": [],
-  "author": "Stripe (https://www.stripe.com)",
-  "license": "MIT",
-  "dependencies": {
-    "prop-types": "15.7.2"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/stripe/react-stripe-elements.git"
-  },
-  "files": [
-    "dist",
-    "lib",
-    "src",
-    "es"
-  ],
-  "jest": {
-    "setupTestFrameworkScriptFile": "<rootDir>/test/setupJest.js"
-  },
-  "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.0",
-    "babel-eslint": "^10.0.2",
-    "babel-jest": "^23.6.0",
-    "babel-loader": "^7.1.2",
-    "babel-plugin-transform-class-properties": "^6.24.1",
-    "babel-plugin-transform-es2015-classes": "^6.24.1",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-react": "^6.24.1",
-    "cross-env": "^5.0.5",
-    "doctoc": "^1.3.0",
-    "enzyme": "3.10",
-    "enzyme-adapter-react-16": "^1.14.0",
-    "eslint": "4",
-    "eslint-config-prettier": "2.9.0",
-    "eslint-config-stripe": "^1.0.13",
-    "eslint-plugin-flowtype": "^2.35.1",
-    "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-jest": "21.17.0",
-    "eslint-plugin-jsx-a11y": "^6.0.2",
-    "eslint-plugin-react": "^7.4.0",
-    "flow-bin": "^0.90.0",
-    "html-webpack-plugin": "^3.2.0",
-    "jest": "23.6.0",
-    "prettier": "1.15.3",
-    "react": "16.9",
-    "react-dom": "16.9",
-    "react-test-renderer": "16.9",
-    "rimraf": "^2.6.2",
-    "webpack": "^4.29.0",
-    "webpack-cli": "^3.2.1",
-    "webpack-dev-server": "^3.1.14"
-  },
-  "peerDependencies": {
-    "react": "^15.5.4 || ^16.0.0-0",
-    "react-dom": "^15.5.4 || ^16.0.0-0"
-  }
-}
-
-
-{
-  "name": "stripe-webhook-example",
-  "version": "0.0.1",
-  "description": "An example app for testing webhooks",
-  "main": "server.js",
-  "scripts": {
-    "start": "node server.js"
-  },
-  "dependencies": {
-    "express": "^4.16.4",
-    "body-parser": "^1.19.0",
-    "stripe": "^7.1.0"
-  },
-  "engines": {
-    "node": "6.10.x"
-  },
-  "keywords": [
-    "stripe",
-    "webhook"
-  ]
-}
-
-
-{
-  "name": "webhook-signing-example-express",
-  "version": "1.0.0",
-  "description": "",
-  "main": "express.js",
-  "scripts": {},
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.16.4",
-    "stripe": "^6.30.0"
-  }
-}
-
-
-{
-  "name": "stripe",
-  "version": "7.9.1",
-  "description": "Stripe API wrapper",
-  "keywords": [
-    "stripe",
-    "payment processing",
-    "credit cards",
-    "api"
-  ],
-  "homepage": "https://github.com/stripe/stripe-node",
-  "author": "Stripe <support@stripe.com> (https://stripe.com/)",
-  "contributors": [
-    "Ask Bjørn Hansen <ask@develooper.com> (http://www.askask.com/)",
-    "Michelle Bu <michelle@stripe.com>",
-    "Alex Sexton <alex@stripe.com>",
-    "James Padolsey"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/stripe/stripe-node.git"
-  },
-  "bugs:": "https://github.com/stripe/stripe-node/issues",
-  "engines": {
-    "node": "^6 || ^8.1 || >=10.*"
-  },
-  "main": "lib/stripe.js",
-  "devDependencies": {
-    "chai": "~4.2.0",
-    "chai-as-promised": "~7.1.1",
-    "coveralls": "^3.0.0",
-    "eslint": "^5.16.0",
-    "eslint-config-prettier": "^4.1.0",
-    "eslint-plugin-chai-friendly": "^0.4.0",
-    "eslint-plugin-prettier": "^3.0.1",
-    "mocha": "~6.1.4",
-    "nock": "^10.0.6",
-    "nyc": "^14.1.0",
-    "prettier": "^1.16.4"
-  },
-  "dependencies": {
-    "qs": "^6.6.0"
-  },
-  "license": "MIT",
-  "scripts": {
-    "clean": "rm -rf ./.nyc_output ./node_modules/.cache ./coverage",
-    "mocha": "nyc mocha",
-    "mocha-only": "mocha",
-    "test": "npm run lint && npm run mocha",
-    "lint": "eslint --ext .js,.jsx .",
-    "fix": "yarn lint --fix",
-    "report": "nyc -r text -r lcov report",
-    "coveralls": "cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
-  }
+	"name": "react-stripe-elements",
+	"version": "5.0.1",
+	"description": "React components for Stripe.js and Stripe Elements",
+	"main": "./lib/index.js",
+	"module": "es/index.js",
+	"jsnext:main": "es/index.js",
+	"scripts": {
+		"test": "node_modules/.bin/jest",
+		"build:commonjs": "cross-env BABEL_ENV=commonjs babel src --out-dir lib",
+		"build:es": "cross-env BABEL_ENV=es babel src --out-dir es",
+		"build:umd": "cross-env BABEL_ENV=commonjs webpack src/index.js -o dist/react-stripe-elements.js --config webpack.config.prod.js --env.noMinimize",
+		"build:umd:min": "cross-env BABEL_ENV=commonjs webpack src/index.js -o dist/react-stripe-elements.min.js --config webpack.config.prod.js",
+		"build": "webpack",
+		"start": "node server.js",
+		"lint": "eslint src demo",
+		"flow": "flow",
+		"build": "yarn run lint && yarn run flow && yarn run build:commonjs && yarn run build:es && yarn run build:umd && yarn run build:umd:min",
+		"clean": "rimraf lib dist es",
+		"prettier": "prettier './**/*.js' './**/*.css' './**/*.md' --write",
+		"prettier-list-different": "prettier './**/*.js' './**/*.css' './**/*.md' --list-different",
+		"prepublish": "yarn run clean && yarn run build",
+		"demo": "webpack-dev-server --content-base dist",
+		"doctoc": "doctoc README.md",
+		"build": "webpack",
+		"start": "webpack && node server.js",
+		"clean": "rm -rf ./.nyc_output ./node_modules/.cache ./coverage",
+		"mocha": "nyc mocha",
+		"mocha-only": "mocha",
+		"test": "npm run lint && npm run mocha",
+		"lint": "eslint --ext .js,.jsx .",
+		"fix": "yarn lint --fix",
+		"report": "nyc -r text -r lcov report",
+		"coveralls": "cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
+	},
+	"keywords": [
+		"node",
+		"glitch",
+		"express",
+		"stripe"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/stripe/react-stripe-elements.git"
+	},
+	"files": [
+		"dist",
+		"lib",
+		"src",
+		"es"
+	],
+	"jest": {
+		"setupTestFrameworkScriptFile": "<rootDir>/test/setupJest.js"
+	},
+	"devDependencies": {
+		"babel-cli": "^6.26.0",
+		"babel-core": "^6.26.0",
+		"babel-eslint": "^10.0.2",
+		"babel-jest": "^23.6.0",
+		"babel-loader": "^7.1.2",
+		"babel-plugin-transform-class-properties": "^6.24.1",
+		"babel-plugin-transform-es2015-classes": "^6.24.1",
+		"babel-plugin-transform-object-rest-spread": "^6.26.0",
+		"babel-preset-env": "^1.6.1",
+		"babel-preset-react": "^6.24.1",
+		"cross-env": "^5.0.5",
+		"doctoc": "^1.3.0",
+		"enzyme": "3.10",
+		"enzyme-adapter-react-16": "^1.14.0",
+		"eslint": "4",
+		"eslint-config-prettier": "2.9.0",
+		"eslint-config-stripe": "^1.0.13",
+		"eslint-plugin-flowtype": "^2.35.1",
+		"eslint-plugin-import": "^2.7.0",
+		"eslint-plugin-jest": "21.17.0",
+		"eslint-plugin-jsx-a11y": "^6.0.2",
+		"eslint-plugin-react": "^7.4.0",
+		"flow-bin": "^0.90.0",
+		"html-webpack-plugin": "^3.2.0",
+		"jest": "23.6.0",
+		"prettier": "1.15.3",
+		"react": "16.9",
+		"react-dom": "16.9",
+		"react-test-renderer": "16.9",
+		"rimraf": "^2.6.2",
+		"webpack": "^4.29.0",
+		"webpack-cli": "^3.2.1",
+		"webpack-dev-server": "^3.1.14",
+		"chai": "~4.2.0",
+		"chai-as-promised": "~7.1.1",
+		"coveralls": "^3.0.0",
+		"eslint": "^5.16.0",
+		"eslint-config-prettier": "^4.1.0",
+		"eslint-plugin-chai-friendly": "^0.4.0",
+		"eslint-plugin-prettier": "^3.0.1",
+		"mocha": "~6.1.4",
+		"nock": "^10.0.6",
+		"nyc": "^14.1.0",
+		"prettier": "^1.16.4"
+	},
+	"dependencies": {
+		"express": "^4.16.4",
+		"jsx-loader": "^0.13.2",
+		"react": "^16.8.6",
+		"react-dom": "^16.8.6",
+		"body-parser": "^1.19.0",
+		"stripe": "^7.1.0",
+		"qs": "^6.6.0",
+		"prop-types": "15.7.2"
+	},
+	"peerDependencies": {
+		"react": "^15.5.4 || ^16.0.0-0",
+		"react-dom": "^15.5.4 || ^16.0.0-0"
+	},
+	"engines": {
+		"node": "8.x"
+	}
 }
