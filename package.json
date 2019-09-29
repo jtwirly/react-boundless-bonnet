@@ -27,6 +27,9 @@
   "dependencies": {
     "prop-types": "15.7.2"
   },
+  "engines": {
+  "node": "8.x"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/stripe/react-stripe-elements.git"
