@@ -45,7 +45,7 @@
   "author": "Stripe (https://www.stripe.com)",
   "license": "MIT",
   "engines": {
-  "node": "8.x"
+  "node": "8.x",
   "yarn": "1.x"
   },
   "repository": {
