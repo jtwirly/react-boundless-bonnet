@@ -46,6 +46,7 @@
   "license": "MIT",
   "engines": {
   "node": "8.x"
+  "yarn": "1.x"
   },
   "repository": {
     "type": "git",
