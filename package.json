@@ -45,7 +45,6 @@
   "keywords": [],
   "author": "Stripe (https://www.stripe.com)",
   "license": "MIT",
-  },
   "engines": {
   "node": "8.x"
   },
