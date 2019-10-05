@@ -11,7 +11,7 @@
     "build:es": "cross-env BABEL_ENV=es babel src --out-dir es",
     "build:umd": "cross-env BABEL_ENV=commonjs webpack src/index.js -o dist/react-stripe-elements.js --config webpack.config.prod.js --env.noMinimize",
     "build:umd:min": "cross-env BABEL_ENV=commonjs webpack src/index.js -o dist/react-stripe-elements.min.js --config webpack.config.prod.js",
-    "coveralls": "cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
+    "coveralls": "cat coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "lint": "eslint src demo && eslint --ext .js,.jsx .",
     "fix": "yarn lint --fix",
     "flow": "flow",
