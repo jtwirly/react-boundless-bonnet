@@ -27,7 +27,7 @@ module.exports = {
 
 // @noflow
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const path = require('path');
+//const path = require('path');
 const webpack = require('webpack');
 
 const config = {
