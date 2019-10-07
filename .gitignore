@@ -4,3 +4,8 @@ node_modules
 tags
 .nyc_output
 coverage
+.DS_Store
+dist
+es
+lib
+*.log
