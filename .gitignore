@@ -1,5 +1,4 @@
 public
-node_modules
 .npm-debug.log
 tags
 .nyc_output
