@@ -3,9 +3,16 @@
 language: node_js
 node_js:
   - "6"
+  - '8'
+  - '10'
 script:
   - npm run lint
   - npm run flow
   - npm run test
   - npm run prettier-list-different
 cache: yarn
+  yarn: true
+  directories:
+    - node_modules
+sudo: false
+after_success: yarn report && yarn coveralls
