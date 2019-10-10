@@ -16,7 +16,7 @@
     "fix": "yarn lint --fix",
     "flow": "flow",
     "build": "webpack && yarn run lint && yarn run flow && yarn run build:commonjs && yarn run build:es && yarn run build:umd && yarn run build:umd:min",
-    "clean": "rimraf lib dist es && rm -rf ./.nyc_output ./node_modules/.cache ./coverage",
+    "clean": "rimraf lib dist es && del -rf ./.nyc_output ./node_modules/.cache ./coverage",
     "mocha": "nyc mocha",
     "mocha-only": "mocha",
     "prettier": "prettier './**/*.js' './**/*.css' './**/*.md' --write",
