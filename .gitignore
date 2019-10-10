@@ -9,3 +9,5 @@ dist
 es
 lib
 *.log
+'node_modules' 
+'node_modules' 
